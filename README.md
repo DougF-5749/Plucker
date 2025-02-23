@@ -15,8 +15,6 @@ A comedic bird identification app (with a twist) created as a **two-week**, **ch
 ## Overview
 Plucker allows users to upload photos of birds, record sightings (species, location), and provides a randonly selected recipe for that bird. 
 
-_**Important:** The creators of this app **do not** actually condone cooking random birds (no matter how tasty they look)._
-
 This project helped us bridge the gap between frontend and backend, practice asynchronous Flask usage, and experiment with building a more robust application than our previous bootcamp projects.
 
 ## Context and Motivation
