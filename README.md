@@ -126,7 +126,7 @@ npm start
 
 **Recipe Templates:**
 
-- Early on, the project needed a quick way to generate recipes before we could integrate with an AI API for dynamic recipe generation. As an MVP (Minimum Viable Product) solution, we decided to **hardcode recipe templates** (eventually 11). One of the first examples was **HERB_GLAZED_RECIPE**
+- Early on, the project needed a quick way to generate recipes before we could integrate with an AI API for dynamic recipe generation. As an MVP solution, we decided to **hardcode recipe templates** (eventually 11). One of the first examples was **HERB_GLAZED_RECIPE**
  
 - A standardised template ensures every recipe has a clear format (title, cooking time, ingredients, steps) that **aligned with the database design**.
 
