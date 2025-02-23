@@ -117,7 +117,10 @@ npm start
 
 - To facilitate quick testing, several rows are inserted into each table. This seeded data ensures that we can immediately run queries and evaluate the schema’s functionality without having to create everything manually.
 
-### 2️⃣ [db_connection setup]()
+### 2️⃣ [db_connection setup](https://github.com/DougF-5749/Plucker/commit/ba244e6308ea69737601f7cc94fb744fffc8fb51)
+- I removed psycopg2 from the requirements and replaced it with asyncpg, allowing the project to use an asynchronous database connection to manage interactions with the database.
+
+- Instead of synchronously opening and closing connections for every request, we benefit from better performance and scalability when handling multiple concurrent requests.
 
 ### 3️⃣ [Recipe Template and Service Layer](https://github.com/DougF-5749/Plucker/commit/e2417a836594ba6bf32da5ef5ac8156d9ce8aa4d)
 
@@ -140,6 +143,13 @@ npm start
   - It abstracts the flow of creating a recipe (which span multiple tables) into a single method (**_create_recipe_from_bird_name_**).
  
 - A **helper function** (**_populate_bird_template_**) inserts the bird name into a predefined recipe template (e.g HERB_GLAZED_RECIPE).
+
+### 4️⃣ [Blue print for route abstraction](https://github.com/DougF-5749/Plucker/commit/01f3e58aa1d2568e7104e99b4ab291d75a42058c)
+- This commit is an exmplae of how I abstracted routes into their own routes directory instead of defining routes directly in app.py.
+
+- Each set of related endpoints is organised within a Flask Blueprint. The main app.py file then calls app.register_blueprint() to link these routes together. This avoids clutter in app.py, making it easier to maintain and locate specific endpoints.
+
+- As the project grows, new features (e.g. authentication, recipe endpoints, etc.) can each have their own Blueprint. This pattern reduces merge conflicts and promotes modular development.
 
 ## Contributors
 
