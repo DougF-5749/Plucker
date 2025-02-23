@@ -110,7 +110,28 @@ npm start
 - Access the app in your browser at http://localhost:3000 (or whichever port you configured).
 
 ## Impactful Commits
-Coming Soon!
+
+### 1️⃣ [Recipe Template and Service Layer](https://github.com/DougF-5749/Plucker/commit/e2417a836594ba6bf32da5ef5ac8156d9ce8aa4d)
+
+**Recipe Templates:**
+
+- Early on, the project needed a quick way to generate recipes before we could integrate with an AI API for dynamic recipe generation. As an MVP (Minimum Viable Product) solution, we decided to **hardcode recipe templates** (eventually 11). One of the first examples was **HERB_GLAZED_RECIPE**
+ 
+- A standardised template ensures every recipe has a clear format (title, cooking time, ingredients, steps) that **aligned with the database design**.
+
+- The **placeholder {BIRD}** lets us easily adapt this base template for any bird name
+
+- While the final goal was to generate recipes on-the-fly via an AI API (with a carefully crafted prompt), **time constraints** led us to maintain a random selection of hardcoded recipes.
+
+**Service Layer:**
+
+- I learned that basic CRUD operations should live in repository files, while higher-level application logic belongs in a **service layer**. This ensures each layer has a clear responsibility.
+  
+- I created a **RecipeService class** to handle higher-level functionality like creating a recipe based on a bird sighting.
+  - This service depends on repositories for data operations (e.g., saving sightings, recipes, ingredients, steps).
+  - It abstracts the flow of creating a recipe (which span multiple tables) into a single method (**_create_recipe_from_bird_name_**).
+ 
+- A **helper function** (**_populate_bird_template_**) inserts the bird name into a predefined recipe template (e.g HERB_GLAZED_RECIPE).
 
 ## Contributors
 
