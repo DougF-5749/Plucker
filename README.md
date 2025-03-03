@@ -9,8 +9,7 @@ A comedic bird identification app (with a twist) created as a **two-week**, **ch
 3. [Features](#features)
 4. [Tech Stack](#tech-stack)
 5. [Installation & Setup](#installation-and-setup)
-6. [Impactful Commits](#impactful-commits)
-7. [Contributors](#contributors)
+6. [Contributors](#contributors)
 
 ## Overview
 Plucker allows users to upload photos of birds, record sightings (species, location), and provides a randonly selected recipe for that bird. 
